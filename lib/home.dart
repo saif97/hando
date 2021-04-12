@@ -29,7 +29,7 @@ class _HomeState extends State<Home> {
                 Image.asset(
                   "assets/logo.png",
                   width: 300,
-                  height: 150,
+                  height: 150
                 ),
                 SizedBox(
                   height: MediaQuery.of(context).size.height * 0.05,

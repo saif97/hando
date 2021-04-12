@@ -9,21 +9,21 @@ class SignIn extends StatefulWidget {
 }
 
 class _SignInState extends State<SignIn> {
-
   TextEditingController email = new TextEditingController();
   TextEditingController password = new TextEditingController();
   final formKey = GlobalKey<FormState>();
 
   @override
   Widget build(BuildContext context) {
-
     return Scaffold(
       body: SingleChildScrollView(
         child: Container(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              SizedBox(height: 40,),
+              SizedBox(
+                height: 40,
+              ),
               Container(
                 alignment: Alignment.center,
                 height: MediaQuery.of(context).size.height * 0.4,
@@ -40,11 +40,15 @@ class _SignInState extends State<SignIn> {
                   width: MediaQuery.of(context).size.width * 0.4,
                 ),
               ),
-              SizedBox(height: MediaQuery.of(context).size.height * 0.09,),
+              SizedBox(
+                height: MediaQuery.of(context).size.height * 0.09,
+              ),
               Text("Insert Something About the Application"),
-              SizedBox(height: MediaQuery.of(context).size.height * 0.05,),
+              SizedBox(
+                height: MediaQuery.of(context).size.height * 0.05,
+              ),
               Container(
-                width:  MediaQuery.of(context).size.width * 0.8,
+                width: MediaQuery.of(context).size.width * 0.8,
                 child: Form(
                   key: formKey,
                   child: Column(
@@ -82,7 +86,7 @@ class _SignInState extends State<SignIn> {
                   padding: EdgeInsets.all(20),
                   decoration: BoxDecoration(
                     color: Colors.grey,
-                      ),
+                  ),
                   width: MediaQuery.of(context).size.width * 0.3,
                   child: Text(
                     "Log In",
@@ -90,14 +94,19 @@ class _SignInState extends State<SignIn> {
                   ),
                 ),
               ),
-              SizedBox(height: 10,),
+              SizedBox(
+                height: 10,
+              ),
               GestureDetector(
                   onTap: () {
                     Navigator.pushReplacement(
                         context, MaterialPageRoute(builder: (context) => SignUp()));
                   },
-                  child: Text("Register for a new Account", style: TextStyle(color: Colors.black87),))
-          ],
+                  child: Text(
+                    "Register for a new Account",
+                    style: TextStyle(color: Colors.black87),
+                  ))
+            ],
           ),
         ),
       ),
