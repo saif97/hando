@@ -8,7 +8,15 @@ class ScreenListing extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('Listing')),
+      appBar: AppBar(
+        title: Text('Trending'),
+        actions: [
+          IconButton(
+            icon: Icon(Icons.search),
+            onPressed: () {},
+          )
+        ],
+      ),
       body: _Main(),
     );
   }
@@ -31,12 +39,13 @@ class _Main extends StatelessWidget {
             return Text("Loading");
           }
           return ListView(
-              children: snapshot.data.docs
-                  .map((DocumentSnapshot doc) => ProductCard(
-                        productName: doc.data()['name'],
-                        listImageUrls: List<String>.from(doc.data()['imageURLs']),
-                      ))
-                  .toList());
+            children: snapshot.data.docs
+                .map((DocumentSnapshot doc) => ProductCard(
+                      productName: doc.data()['name'],
+                      listImageUrls: List<String>.from(doc.data()['imageURLs']),
+                    ))
+                .toList(),
+          );
         },
       ),
     );
@@ -50,8 +59,8 @@ class ProductCard extends StatelessWidget {
   const ProductCard({Key key, this.productName, this.listImageUrls}) : super(key: key);
   @override
   Widget build(BuildContext context) {
-    print(listImageUrls[0]);
     return Container(
+      padding: EdgeInsets.symmetric(horizontal: 15, vertical: 10),
       child: Card(
         child: Column(
           children: <Widget>[
@@ -60,7 +69,10 @@ class ProductCard extends StatelessWidget {
               placeholder: (context, url) => CircularProgressIndicator(),
               errorWidget: (context, url, error) => Icon(Icons.error),
             ),
-            Text(productName),
+            Container(
+              padding: EdgeInsets.all(10),
+              child: Text(productName),
+            ),
           ],
         ),
       ),

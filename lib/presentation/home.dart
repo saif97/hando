@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:hando/presentation/screen_listing/listing.dart';
 
 import 'account.dart';
 import 'buy.dart';
@@ -63,7 +64,7 @@ class _HomeState extends State<Home> {
                 ),
                 GestureDetector(
                   onTap: () {
-                    Navigator.push(context, MaterialPageRoute(builder: (context) => Buy()));
+                    Navigator.push(context, MaterialPageRoute(builder: (context) => ScreenListing()));
                   },
                   child: Container(
                     decoration: BoxDecoration(

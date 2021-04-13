@@ -1,3 +1,4 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 
 class Buy extends StatefulWidget {
@@ -91,6 +92,34 @@ class _BuyState extends State<Buy> {
               ],
             ),
           ),
+        ),
+      ),
+    );
+  }
+}
+
+class ProductCard extends StatelessWidget {
+  final String productName;
+  final List<String> listImageUrls;
+
+  const ProductCard({Key key, this.productName, this.listImageUrls}) : super(key: key);
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      padding: EdgeInsets.symmetric(horizontal: 15, vertical: 10),
+      child: Card(
+        child: Column(
+          children: <Widget>[
+            CachedNetworkImage(
+              imageUrl: listImageUrls[0],
+              placeholder: (context, url) => CircularProgressIndicator(),
+              errorWidget: (context, url, error) => Icon(Icons.error),
+            ),
+            Container(
+              padding: EdgeInsets.all(10),
+              child: Text(productName),
+            ),
+          ],
         ),
       ),
     );

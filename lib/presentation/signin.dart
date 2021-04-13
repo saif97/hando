@@ -35,18 +35,13 @@ class _SignInState extends State<SignIn> {
               ),
               SizedBox(
                 child: Container(
-                  height: 1,
-                  color: Colors.grey[700],
-                  width: MediaQuery.of(context).size.width * 0.4,
-                ),
+                    height: 1,
+                    color: Colors.grey[700],
+                    width: MediaQuery.of(context).size.width * 0.4),
               ),
-              SizedBox(
-                height: MediaQuery.of(context).size.height * 0.09,
-              ),
+              SizedBox(height: MediaQuery.of(context).size.height * 0.09),
               Text("Insert Something About the Application"),
-              SizedBox(
-                height: MediaQuery.of(context).size.height * 0.05,
-              ),
+              SizedBox(height: MediaQuery.of(context).size.height * 0.05),
               Container(
                 width: MediaQuery.of(context).size.width * 0.8,
                 child: Form(
