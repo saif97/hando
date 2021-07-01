@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:hando/presentation/screen_listing/listing.dart';
 
 import 'account.dart';
-import 'buy.dart';
 import 'sell.dart';
 import 'signin.dart';
 
@@ -27,11 +26,7 @@ class _HomeState extends State<Home> {
                 SizedBox(
                   height: MediaQuery.of(context).size.height * 0.05,
                 ),
-                Image.asset(
-                  "assets/logo.png",
-                  width: 300,
-                  height: 150
-                ),
+                Image.asset("assets/logo.png", width: 300, height: 150),
                 SizedBox(
                   height: MediaQuery.of(context).size.height * 0.05,
                 ),
@@ -64,7 +59,8 @@ class _HomeState extends State<Home> {
                 ),
                 GestureDetector(
                   onTap: () {
-                    Navigator.push(context, MaterialPageRoute(builder: (context) => ScreenListing()));
+                    Navigator.push(
+                        context, MaterialPageRoute(builder: (context) => ScreenListing()));
                   },
                   child: Container(
                     decoration: BoxDecoration(

@@ -77,12 +77,9 @@ class _SignInState extends State<SignIn> {
                   Navigator.pushReplacement(
                       context, MaterialPageRoute(builder: (context) => Home()));
                 },
-                child: Container(
-                  padding: EdgeInsets.all(20),
-                  decoration: BoxDecoration(
-                    color: Colors.grey,
-                  ),
-                  width: MediaQuery.of(context).size.width * 0.3,
+                child: ElevatedButton(
+                  onPressed: () async {
+                  },
                   child: Text(
                     "Log In",
                     textAlign: TextAlign.center,
