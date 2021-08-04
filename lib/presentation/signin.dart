@@ -60,7 +60,7 @@ class _SignInState extends State<SignIn> {
                         padding: const EdgeInsets.only(top: 20, bottom: 50),
                         child: TextFormField(
                           textAlign: TextAlign.center,
-                          obscureText: true,
+                            obscureText: true,
                           style: TextStyle(color: Colors.black),
                           controller: password,
                           decoration: InputDecoration(
@@ -78,8 +78,7 @@ class _SignInState extends State<SignIn> {
                       context, MaterialPageRoute(builder: (context) => Home()));
                 },
                 child: ElevatedButton(
-                  onPressed: () async {
-                  },
+                  onPressed: () async {},
                   child: Text(
                     "Log In",
                     textAlign: TextAlign.center,
